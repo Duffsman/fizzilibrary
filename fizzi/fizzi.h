@@ -25,11 +25,6 @@ RotaryEncoder encoder(ENCODER_PINA,ENCODER_PINB);
 #endif
 
 
-/*
-#if defined(__AVR_ATtiny24__) || defined(__AVR_ATtiny44__) || defined(__AVR_ATtiny84__)
-#endif
-*/
-
 
 
 // size of the audiobuffer
@@ -134,7 +129,7 @@ void initFizzi() {
     initEncoder();
   #endif
 
-
+/*
   #ifdef USE_FIZZI_ANALOG
   // set ADC-Clock prescaler to 4
   cbi(ADCSRA,ADPS2);
@@ -143,7 +138,7 @@ void initFizzi() {
   sbi(ADCSRB,ADLAR);
   #warning "only use fizziAnalogRead() "
   #endif
-
+*/
   #ifdef USE_FAST_ADC
   // set ADC-Clock prescaler to 4
   cbi(ADCSRA,ADPS2);
