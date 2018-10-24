@@ -1,6 +1,6 @@
 
 #include<fizzi.h>
-#include<envelope.h>
+#include<fizziEnvelope.h>
 #include<fizziButton.h>
 
 
@@ -25,7 +25,7 @@ settings for the chip:
 
 unsigned int tick = 0;
 
-Envelope env = Envelope();
+fizziEnvelope env = fizziEnvelope();
 fizziButton button = fizziButton();
 
 
@@ -33,6 +33,8 @@ void setup() {
   initFizzi();
   // set values for attack, decay, sustain and release. the duration is measured in samples.
   env.setADSR(400,200,600,3000);
+  // set sustain level 
+  env.sustainLevel(180);
   // setup button, with INPUT_PULLUP we can save an external PULLUP resistor
   pinMode(BUTTON_PIN,INPUT_PULLUP);
   // tell the buttonobject the Pin

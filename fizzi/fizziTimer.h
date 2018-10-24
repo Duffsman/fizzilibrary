@@ -11,9 +11,7 @@ class fizziTimer{
 public:
 
   /** @ingroup fizziTimer
-  * DESCRIPTION: Constructor.\n
-  * INPUT: - \n
-  * RETURN: -
+constructor
   */
 
 fizziTimer(){

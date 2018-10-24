@@ -47,46 +47,52 @@ void initSync();
 void initEncoder();
 void updateFizzi();
 /** @ingroup core
-* DESCRIPTION: This is the place where to put the magic Formula. \n
+* DESCRIPTION: this is the place where to put the magic Formula \n
 * INPUT: - \n
 * RETURN: a sample
 */
 byte magicFormula();
 /** @ingroup core
-* DESCRIPTION: When USE_SYNC is active and the sync input is active the
-output sample has to be returned from this function. \n
+* DESCRIPTION: when USE_SYNC is active and the sync input is active the
+output sample has to be returned from this function \n
 * INPUT: - \n
 * RETURN:  a sample
 */
 byte syncedOut();
 /** @ingroup core
-* DESCRIPTION: When USE_SYNC is active and the sync input is **not** active the
-output sample has to be returned from this function. \n
+* DESCRIPTION: when USE_SYNC is active and the sync input is **not** active the
+output sample has to be returned from this function \n
 * INPUT: - \n
 * RETURN:  a sample
 */
 byte defaultOut();
 byte (*masterOut)();
 /** @ingroup core
-* DESCRIPTION: This function handles eveything except computing audio samples. Put all your code here.  \n
+* DESCRIPTION: this function handles eveything except computing audio samples, put all your code here \n
 * INPUT: - \n
 * RETURN:  -
 */
 void updateControl();
 /** @ingroup core
-* DESCRIPTION: This function is called in updateFizzi(), can also be called more often
-* in updateControl() if sound is jittering.\n
+* DESCRIPTION: this function is called in updateFizzi(), can also be called more often
+* in updateControl() if sound is jittering \n
 * INPUT: - \n
 * RETURN: -
 */
 void updateBuffer();
 /** @ingroup core
-* DESCRIPTION: When USE_SYNC is active this function will be called once everytime a new sync pulse occurs. \n
+* DESCRIPTION: when USE_SYNC is active this function will be called once everytime a new sync pulse occurs \n
 * INPUT: - \n
 * RETURN: -
 */
 void syncPulse();
 
+/** @ingroup core
+* DESCRIPTION: This function checks if the flag for a new sync pulse has been set.
+Can also be called more often in updateControl() if the timing is not tight enough. \n
+* INPUT: - \n
+* RETURN: -
+*/
 
 void updateSyncPulse();
 
@@ -110,7 +116,7 @@ bool isSynced = false;
 volatile bool _newSyncPulse = false;
 
 /** @ingroup core
-* DESCRIPTION: Setup timers, start fizzi. \n
+* DESCRIPTION: setup timers and start fizzi \n
 * INPUT: - \n
 * RETURN: -
 */
@@ -181,7 +187,7 @@ void initSync() {
 /*******************************/
 
 /** @ingroup core
-* DESCRIPTION: This function handles all the magic of Fizzi and is the ONLY function that has to be called in loop() \n
+* DESCRIPTION: This function handles the internals of Fizzi and is the ONLY function that has to be called in loop(). \n
 * INPUT: - \n
 * RETURN: -
 */
@@ -223,7 +229,7 @@ void updateBuffer() {
 /*******************************/
 /** @ingroup core
 * DESCRIPTION: Use this function as a replacement for millis().\n
-* INPUT:  \n
+* INPUT: - \n
 * RETURN: Milliseonds since start of the program.
 */
 unsigned long fizziMillis(){
@@ -300,8 +306,8 @@ ISR(TIMER_INTERRUT)
 /*******************************/
 
 /** @ingroup core
-* DESCRIPTION: A very simple bitcrush effect.\n
-* INPUT:  sample, resolution (1...8 bits)\n
+* DESCRIPTION: a very simple bitcrush effect \n
+* INPUT: a sample\n
 * RETURN: crushed sample
 */
 
@@ -311,7 +317,7 @@ inline uint8_t crush(uint8_t sample, uint8_t resolution){
 }
 
 /** @ingroup core
-* DESCRIPTION: A function for mixing two signals together.\n
+* DESCRIPTION: a function for mixing two signals together \n
 * INPUT:  two samples \n
 * RETURN: mixed sample
 */
@@ -322,7 +328,7 @@ inline uint8_t mix(uint8_t sampleA, uint8_t sampleB){
 
 /** @ingroup core
 * DESCRIPTION: A function for modulating two signals together. For example can be used to adjust the volume of
-an samplestream or to modulate two signals. \n
+a samplestream or for modulating two signals. \n
 * INPUT:  two samples \n
 * RETURN: modulated sample
 */

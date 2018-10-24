@@ -1,19 +1,17 @@
 #include "fizziButton.h"
 
 /** @defgroup fizziButton
-  A simple Button debounce that does not rely on millis():
+  A simple Button debounce that does not rely on millis()
 */
 
 /** @ingroup fizziButton
-* DESCRIPTION:  Constructor.\n
-* INPUT:  - \n
-* RETURN: -
+*constructor
 */
 fizziButton::fizziButton() {}
 
 /**  @ingroup fizziButton
-* DESCRIPTION:  Attach Pin to the Button object.\n
-* INPUT:  the Pin to read. \n
+* DESCRIPTION:  attach pin to the Button object.\n
+* INPUT:  the pin to read \n
 * RETURN: -
 */
 
@@ -24,7 +22,7 @@ void fizziButton::attach(byte pin) {
 }
 
 /**  @ingroup fizziButton
-* DESCRIPTION: Update button state.\n
+* DESCRIPTION: update button state\n
 * INPUT: - \n
 * RETURN: -
 */
@@ -37,8 +35,8 @@ void fizziButton::update() {
 }
 
 /**  @ingroup fizziButton
-* DESCRIPTION: Update button state.\n
-* INPUT:  a value e.g. read from a pin. \n
+* DESCRIPTION: update button state\n
+* INPUT:  a value e.g. read from a pin \n
 * RETURN: -
 */
 
@@ -72,7 +70,7 @@ bool fizziButton::computeFell() {
 }
 
 /**  @ingroup fizziButton
-* DESCRIPTION: get the current state of the button.\n
+* DESCRIPTION: get the current state of the button\n
 * INPUT: - \n
 * RETURN: true or false, depending on the way the button is connected (pullup or pulldown)
 */
@@ -92,17 +90,17 @@ bool fizziButton::read() {
 }
 
 /**  @ingroup fizziButton
-* DESCRIPTION: get when the button pin fell.\n
+* DESCRIPTION: get when the button pin fell\n
 * INPUT: - \n
-* RETURN: true when there was a transition from HIGH to LOW.
+* RETURN: true when there was a transition from HIGH to LOW
 */
 bool fizziButton::fell(){
   return _fell;
 }
 /**  @ingroup fizziButton
-* DESCRIPTION: get when the button pin rose.\n
+* DESCRIPTION: get when the button pin rose\n
 * INPUT: - \n
-* RETURN: true when there was a transition from LOW to HIGH.
+* RETURN: true when there was a transition from LOW to HIGH
 */
 bool fizziButton::rose(){
   return _rose;

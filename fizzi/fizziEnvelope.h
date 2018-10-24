@@ -1,30 +1,30 @@
-#ifndef envelope_h
-#define envelope_h
+#ifndef fizziEnvelope_h
+#define fizziEnvelope_h
 
 #include <Arduino.h>
 
 
-/** @defgroup envelope
-  A simple ADSR envelope.
+/** @defgroup fizziEnvelope
+  a simple ADSR envelope
 */
-class Envelope{
+class fizziEnvelope{
 
 public:
 
-  /** @ingroup envelope
-  Constructor
+  /** @ingroup fizziEnvelope
+  constructor
   */
-  Envelope(){
+  fizziEnvelope(){
     computeIncr();
   };
 
 
-  /** @ingroup envelope
-    * DESCRIPTION: set paramters of the envelope \n
+  /** @ingroup fizziEnvelope
+  * DESCRIPTION: set paramters of the envelope \n
   * INPUT: Duration of attack, decay, sustain and release measured in samples
   * so with the default samplerate of 8000 Hz one can simply divide the set value by 8 to find out the
-  * duration in milliseonds. \n
-    IMPORTANT: all these values should never be 0.
+  * duration in milliseonds \n
+    IMPORTANT: all these values should never be 0
   * RETURN: -
   */
 
@@ -38,12 +38,12 @@ public:
 
   };
 
-  /** @ingroup envelope
-  * DESCRIPTION: A helper for setting the envelope more easily \n
+  /** @ingroup fizziEnvelope
+  * DESCRIPTION: a helper for setting the envelope more easily \n
   * INPUT: len is the total length of the tone, accent is the duration
   * of the attack phase as a percantage of the length. The attack phases
   * maximum length (when set to 255) can be 50% of the total length. \n
-  * IMPORTANT: The accent and len value should never be 0. \n
+  * IMPORTANT: The accent and len value should never be 0 \n
   * RETURN: -
   */
 
@@ -62,8 +62,8 @@ public:
 
   }
 
-  /** @ingroup envelope
-  * DESCRIPTION: Set the audio level during sustain phase \n
+  /** @ingroup fizziEnvelope
+  * DESCRIPTION: set the audio level during sustain phase \n
   * INPUT: volume 0-255 \n
   * RETURN: -
 
@@ -75,8 +75,8 @@ public:
   };
 
 
-  /** @ingroup envelope
-  * DESCRIPTION: Enable the envelope and start playing the note. \n
+  /** @ingroup fizziEnvelope
+  * DESCRIPTION: enable the envelope and start playing the note \n
   * INPUT: - \n
   * RETURN: -
 
@@ -91,9 +91,9 @@ public:
 
   };
 
-  /** @ingroup envelope
-  * DESCRIPTION: When set to true the envelope stays in sustainphase until
-  * set to false again. \n
+  /** @ingroup fizziEnvelope
+  * DESCRIPTION: when set to true the envelope stays in sustainphase until
+  * set to false again \n
   * INPUT: true or false \n
   * RETURN: -
   */
@@ -102,18 +102,18 @@ public:
     _hold = h;
   };
 
-  /** @ingroup envelope
-  * DESCRIPTION: Check if the envelope is running. \n
+  /** @ingroup fizziEnvelope
+  * DESCRIPTION: check if the envelope is running \n
   * INPUT: - \n
-  * RETURN: true if the envelope is running, otherwise false.
+  * RETURN: true if the envelope is running, otherwise false
   */
   bool isActive() {
 
     return _state!=4;
   };
 
-  /** @ingroup envelope
-  * DESCRIPTION: Compute next value of the envelope.  \n
+  /** @ingroup fizziEnvelope
+  * DESCRIPTION: compute next value of the envelope  \n
   * INPUT: - \n
   * RETURN: Next value of the Envelope (0-255)
   */
@@ -123,10 +123,10 @@ public:
     return compute();
   };
 
-  /** @ingroup envelope
-  * DESCRIPTION: Compute next value of the envelope and apply it to a sample.  \n
-  * INPUT: A sample (0-255). \n
-  * RETURN: Envelope applied to sample (0-255).
+  /** @ingroup fizziEnvelope
+  * DESCRIPTION: compute next value of the envelope and apply it to a sample  \n
+  * INPUT: a sample (0-255) \n
+  * RETURN: envelope applied to sample (0-255)
   */
   uint8_t next(uint8_t sample) {
 
@@ -172,7 +172,7 @@ private:
 
     if((!_timer) && _state != 4){
       _state ++;
-      _timer = _adsr[_state]; // hier war mal [_state%4]?!?!
+      _timer = _adsr[_state];
 
     }
 

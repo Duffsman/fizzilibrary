@@ -3,23 +3,20 @@
 
 
 /** @defgroup fizziMetro
-  A simple metronome.
+A simple metronome.
 */
 
 class fizziMetro {
 public:
 
   /** @ingroup fizziMetro
-  * DESCRIPTION: Constructor.\n
-  * INPUT: - \n
-  * RETURN: -
+  constructor
   */
   fizziMetro(){};
 
   /** @ingroup fizziMetro
-  * DESCRIPTION: Constructor.\n
+  constructor \n
   * INPUT: length of interval in milliseconds \n
-  * RETURN: -
   */
 
   fizziMetro(uint16_t interval){
@@ -28,7 +25,7 @@ public:
   }
 
   /** @ingroup fizziMetro
-  * DESCRIPTION: Set duration of the interval .\n
+  * DESCRIPTION: set duration of the interval \n
   * INPUT: length of interval in milliseconds \n
   * RETURN: -
   */
@@ -38,7 +35,7 @@ public:
   }
 
   /** @ingroup fizziMetro
-  * DESCRIPTION: Start the metro.\n
+  * DESCRIPTION: start the metro\n
   * INPUT: - \n
   * RETURN: -
   */
@@ -47,7 +44,7 @@ public:
   }
 
   /** @ingroup fizziMetro
-  * DESCRIPTION: Stop the metro.\n
+  * DESCRIPTION: stop the metro\n
   * INPUT: - \n
   * RETURN: -
   */
@@ -57,19 +54,19 @@ public:
   }
 
   /** @ingroup fizziMetro
-  * DESCRIPTION: Get the current state of the metro, so wether it's running or not.\n
+  * DESCRIPTION: get the current state of the metro, so wether it's running or not\n
   * INPUT: - \n
-  * RETURN: true when metro is running, otherwise flase.
+  * RETURN: true when metro is running, otherwise flase
   */
-void isActive() {
-  return _running;
-}
+  void isActive() {
+    return _running;
+  }
 
-/** @ingroup fizziMetro
-* DESCRIPTION: Check the metro. When an interval has passed this fuction return true.\n
-* INPUT: - \n
-* RETURN: True when interval has passed.
-*/
+  /** @ingroup fizziMetro
+  * DESCRIPTION: when an interval has passed this fuction returns true \n
+  * INPUT: - \n
+  * RETURN: true when interval has passed
+  */
 
   bool get() {
     bool ret = false;

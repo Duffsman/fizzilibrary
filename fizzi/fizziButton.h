@@ -2,7 +2,7 @@
 #define fizziButton_h
 #include <Arduino.h>
 
-// algorithm taken from https://pubweb.eng.utah.edu/~cs5780/debouncing.pdf
+// part of the algorithm taken from https://pubweb.eng.utah.edu/~cs5780/debouncing.pdf
 
 class fizziButton {
   public:

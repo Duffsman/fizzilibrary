@@ -1,23 +1,22 @@
-#ifndef glide_h
-#define glide_h
+#ifndef fizziGlide_h
+#define fizziGlide_h
 #include <Arduino.h>
 
 
-/** @defgroup glide
-An object for linear interpolating a value from start to stop over a given time.
-When using this for samplestreams call next() inside magicFormula()
+/** @defgroup fizziGlide
+an object for linear interpolating a value from start to stop over a given number if steps
 */
 
-class Glide{
+class fizziGlide{
 public:
 
-  /** @ingroup glide
-  Constructor
+  /** @ingroup fizziGlide
+  constructor
   */
-  Glide(){};
+  fizziGlide(){};
 
-/** @ingroup glide
-DESCRIPTION: Set the glide object. \n
+/** @ingroup fizziGlide
+DESCRIPTION: set the glide object \n
 INPUT: start value (0...255), stop value (0...255), and legnth (0...65.565) \n
 OUTPUT: -
 */
@@ -32,18 +31,18 @@ OUTPUT: -
 
   };
 
-  /** @ingroup glide
-  DESCRIPTION: Current status of the glide. \n
+  /** @ingroup fizziGlide
+  DESCRIPTION: current status of the glide \n
   INPUT: - \n
-  OUTPUT: True if glide is active, otherwise false.
+  OUTPUT: true if glide is active, otherwise false
   */
 
   bool isActive(){
     return _isOn;
   };
 
-  /** @ingroup glide
-  DESCRIPTION: Start the glide. Can only be startetd when the previous glide is finished. \n
+  /** @ingroup fizziGlide
+  DESCRIPTION: start the glide; can only be startetd when the previous glide is finished \n
   INPUT: -\n
   OUTPUT: -
   */
@@ -56,8 +55,8 @@ OUTPUT: -
     }
   };
 
-  /** @ingroup glide
-  DESCRIPTION: Compute the next value for the glide. When the glide is finished this function returns the stop value \n
+  /** @ingroup fizziGlide
+  DESCRIPTION: compute the next value for the glide when the glide is finished this function returns the stop value \n
   INPUT: -\n
   OUTPUT: next value (0...255)
   */
