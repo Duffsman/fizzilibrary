@@ -1,0 +1,42 @@
+ fizzi	KEYWORD1
+fizzi_board	KEYWORD1
+envelope	KEYWORD1
+initFizzi	KEYWORD1
+updateFizzi	KEYWORD1
+updateControl	KEYWORD1
+magicFormula	KEYWORD1
+syncedOut	KEYWORD1
+defaultOut	KEYWORD1
+
+
+Envelope	KEYWORD1
+setADSR		KEYWORD1
+setSustainLevel		KEYWORD1
+setAccentLength		KEYWORD1
+noteOn	KEYWORD1
+isActive	KEYWORD1
+next	KEYWORD1
+
+syncPulse	KEYWORD1
+isSynced	LITERAL1
+t		LITERAL1
+fizziMillis	LITERAL1
+
+crush		KEYWORD1
+mod		KEYOWRD1
+mix		KEYWORD1
+
+USE_SYNC	LITERAL1
+USE_ENCODER	LITERAL1
+USE_FAST_ADC	LITERAL1
+
+fizziButton	KEYWORD1
+
+attach	KEYWORD1
+rose KEYWORD1
+fell KEYWORD1
+press KEYWORD1
+
+
+
+
