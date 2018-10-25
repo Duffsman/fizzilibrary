@@ -1,3 +1,3 @@
 # fizzilibrary
 
-A Library for programmng the Fizzi board. 
+A Library for programing the fizzi board. 
