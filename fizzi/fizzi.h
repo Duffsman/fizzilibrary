@@ -11,14 +11,15 @@
 /** @defgroup core
 The Heart of Fizzi. This is where the magic happens! \n
 DISCLAIMER: DO **NOT** USE delay(),micros() AND millis()!!! \n
-For Accessing the pins of the MCU use **P0....P10**.
+For Accessing the pins of the MCU use **P0....P10**.\n
 
-**ATTINY 24/44/84:** \n
+ATTINY **24/44/84** \n
 P7 can only be accessed when sync mode (USE_SYNC) is not active. P8 is also blocked because it is used for audio output.
 P7 and P8 are broken out anyway so one can attach a LED for example.
 \n \n
-**ATTINY 261/461/861:** \n
-P12 can only be accessed when sync mode (USE_SYNC) is not active.
+ATTINY **261/461/861** \n
+P12 can only be accessed when sync mode (USE_SYNC) is not active. Pins 0 to 7 are also
+analog inputs, access them via A_P0...A_P7.
 */
 
 
