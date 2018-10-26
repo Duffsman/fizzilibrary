@@ -1,6 +1,6 @@
-#fizzi
+# fizzi
 
-##Board
+## Board
 Das fizzi board lässt sich in 5 Baugruppen unterteilen:
 
 **1. Microcontroller**  
@@ -55,8 +55,8 @@ Um die Elektronik auf dem Board zu schützen ist der Eingang durch einen Optokop
 
 ![ov5](bilder/overview-05.png)
 
-##Programmierung
-###Vorbereitung und Wissenswertes
+## Programmierung
+### Vorbereitung und Wissenswertes
 Das fizzi Board kann mit der Arduino IDE programmiert werden. Damit das klappt muss zuerst der ATtiny Core von Spence Konde installiert werden. Gehe dazu in der Arduino IDE auf **Datei -> Einstellungen** und füge diese URL __http://drazzy.com/package_drazzy.com_index.json__ zu den "Zusätzlichen-Boardverwalter-URLs" hinzu. Nun kannst du unter **Werkzeuge->Board->Boardverwalter** den Core finden und installieren.
 Zum Programmieren des Boards benötigt man einen ISP-Programmer, man kann dafür aber auch einfach einen Arduino Uno als Programmer verwenden. Übertrage dafür den **ArduinoISP** Sketch der unter **Datei->Beispiele->11.ArduinoISP** zu finden ist auf den Uno. Anschließende muss noch ein 10µF Kondensator zwischen **RESET** und **GND** platziert werden, so dass der negative Pol des Kondensators mit **GND** verbunedn ist. Das folgende Diagramm zeigt, wie der Arduino mit dem ICSP-Anschluss auf dem fizzi Board verbunden werden muss.  
 
