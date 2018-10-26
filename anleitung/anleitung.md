@@ -253,7 +253,7 @@ void loop() {
 
 ```
 
-Als erstes muss derLibrary mitgeteilt werden, dass auch der sync eingang verwendet werden soll indem man ganz am Anfang den Befehl `#define USE_SYNC`platziert. Außerdem kommen noch zwei Funktionen dazu die gefüllt werden müssen: `syncedOut()` und `syncPulse()`. Je nachdem ob am Board der sync mode aktiviert ist, werden die samples in `defaultOut()`oder in `syncedOut()`berechnet. So kann man für die beiden Betriebsmodi unterschieldiche Verhalten implementieren. Die Funktion `syncPulse()` wird automatisch bei jedem neuen Synchronpuls ausgeführt. Hier kommt also alles rein was passieren soll wenn es einen neuen Impuls gegeben hat. eeeeeeeassssy! 
+Als erstes muss der Library mitgeteilt werden, dass auch der sync eingang verwendet werden soll indem man ganz am Anfang den Befehl `#define USE_SYNC`platziert. Außerdem kommen noch zwei Funktionen dazu die gefüllt werden müssen: `syncedOut()` und `syncPulse()`. Je nachdem ob am Board der sync mode aktiviert ist, werden die samples in `defaultOut()`oder in `syncedOut()`berechnet. So kann man für die beiden Betriebsmodi unterschieldiche Verhalten implementieren. Die Funktion `syncPulse()` wird automatisch bei jedem neuen Synchronpuls ausgeführt. Hier kommt also alles rein was passieren soll wenn es einen neuen Impuls gegeben hat. eeeeeeeassssy! 
 
 
 
