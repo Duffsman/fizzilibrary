@@ -330,6 +330,17 @@ ISR(SYNC_INTERRUPT){
     int ret = (sampleA *sampleB) >>8;
     return uint8_t(ret);
   }
+  /** @ingroup compare
+  * DESCRIPTION: A simple map function for ints \n
+  * INPUT:  value to map, in_min, in_max, out_min, out_max \n
+  * RETURN: mapped value
+  **/
+
+  inline int intMap(int in, int in_min, int in_max, int out_min, int out_max){
+    int multiplier = (256L*(out_max-out_min))/(in_max-in_min);
+
+    return (int) (((multiplier*(in-in_min))>>8) + out_min);
+  }
 
 
 
