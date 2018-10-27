@@ -2,7 +2,7 @@
 #define fizzi_h
 
 
-#include <Arduino.h>
+//#include <Arduino.h>
 #include <fizzi_boards.h>
 #include <avr/pgmspace.h>
 #include <avr/io.h>
