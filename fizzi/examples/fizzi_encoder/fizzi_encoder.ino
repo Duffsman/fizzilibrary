@@ -1,4 +1,4 @@
-// for activating the encoder add this define 
+// for activating the encoder add this define
 // this define has to be placed before including the fizzi.h file
 #define USE_ENCODER
 
@@ -33,13 +33,14 @@ void setup() {
 void updateControl(){
 
 
-// update encPos if encoder position has changed
-if(encoder.getPosition() != 0){
- encPos += encoder.getPosition();
- encoder.setPosition(0);
-}
+  // update encPos if encoder position has changed
+  if(encoder.getPosition() != 0){
+    encPos += encoder.getPosition();
+    encPos = constrain(encPos,0,14);
+    encoder.setPosition(0);
+  }
 
-encPos = constrain(encPos,0,14);
+
 
 
 }

@@ -33,7 +33,7 @@ void setup() {
   initFizzi();
   // set values for attack, decay, sustain and release. the duration is measured in samples.
   env.setADSR(400,200,600,3000);
-  // set sustain level 
+  // set sustain level
   env.sustainLevel(180);
   // setup button, with INPUT_PULLUP we can save an external PULLUP resistor
   pinMode(BUTTON_PIN,INPUT_PULLUP);
@@ -50,6 +50,7 @@ void updateControl(){
 
   //check if the button has been pressed
   if(button.fell()){
+    //trigger envelope
     env.noteOn();
   }
   // if the button remains pressed the envelope remains in sustain phase

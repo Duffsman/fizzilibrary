@@ -23,6 +23,7 @@ All timing tasks should make use of the fizziTimer or fizziMetro. delay() doesn'
 
 #define LED_PIN P0
 unsigned long t= 0;
+byte var = 3;
 
 // create new timer object
 fizziTimer timer = fizziTimer();
@@ -41,20 +42,22 @@ void setup() {
 
 
 void updateControl(){
-  // when timer is equal to or greater 500 milliseconds
+  // when timer is equal to or greater than 500 milliseconds
   if(timer.get() >= 500){
     // reset the timer
    timer.reset();
    // toggle and update led state
    ledState = !ledState;
    digitalWrite(LED_PIN,ledState);
+   // compute a new value for var based on t
+   var = (t>>5)|(t<<3)&(t<<2);
   }
 
 }
 
 byte magicFormula(){
   t++;
-  int out =(t>>2)|(t<<3);
+  int out =(t>>2)|(t<<3)*var;
   return byte(out);
 }
 

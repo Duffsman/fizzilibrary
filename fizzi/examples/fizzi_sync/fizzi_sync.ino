@@ -4,15 +4,7 @@
 #define USE_SYNC
 
 #include<fizzi.h>
-<<<<<<< Updated upstream
-#include<FizziEnvelope.h>
-=======
-<<<<<<< HEAD
 #include<fizziEnvelope.h>
-=======
-#include<FizziEnvelope.h>
->>>>>>> origin/master
->>>>>>> Stashed changes
 
 
 
@@ -43,7 +35,7 @@ void setup() {
   initFizzi();
   // set envelope
   env.setADSR(500,500,500,500);
-
+  env.setSustainLevel(128);
 }
 
 
