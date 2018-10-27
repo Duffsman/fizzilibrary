@@ -4,7 +4,7 @@
 #define USE_SYNC
 
 #include<fizzi.h>
-#include<envelope.h>
+#include<FizziEnvelope.h>
 
 
 
@@ -28,7 +28,7 @@ settings for the chip:
 
 unsigned long t = 0;
 
-Envelope env = Envelope();
+fizziEnvelope env = fizziEnvelope();
 
 
 void setup() {
