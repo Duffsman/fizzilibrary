@@ -87,6 +87,10 @@ public:
       _state = 0;
       _timer = _adsr[0];
       _return = 0;
+    } else if(_retrigger){
+      _state = 0;
+      _timer = _adsr[0];
+      _return = 0;
     }
 
   };
@@ -133,6 +137,17 @@ public:
     return (compute()*sample)>>8;
   }
 
+  /** @ingroup fizziEnvelope
+  * DESCRIPTION: enable retrigger, so the envelope can be interrupted   \n
+  * INPUT: bool \n
+  * RETURN: -
+  */
+
+  void setRetrigger(bool b){
+    _retrigger = b;
+  }
+
+
 
 private:
   /* STATES
@@ -149,6 +164,7 @@ private:
   };
 
   bool _hold = false;
+  bool _retrigger = false;
   uint8_t _sLvl = 127;
   uint8_t _asDiff = 255-_sLvl;
   int _timer = 0;
