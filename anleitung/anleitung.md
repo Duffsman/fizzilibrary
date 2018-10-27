@@ -18,7 +18,7 @@ Da die Pins **P9** und **P10** auch gleichzeitig mit dem ICSP-Anschluss verbunde
 |P0 / A_P0   | 0 / A0		   | 20		      | analog  |
 |P1 / A_P1   | 1 / A1		   | 19		      | analog  |
 |P2 / A_P2   | 2 / A2		   | 18		      | analog  |
-|P3 / A_P4   | 10 / A3		   | 14		      | analog  |
+|P3 / A_P3   | 10 / A3		   | 14		      | analog  |
 |P4 / A_P4   | 11 / A4		   | 13		      | analog  |
 |P5 / A_P5   | 12 / A5		   | 12		      | analog  |
 |P6 / A_P6   | 13 / A6		   | 11		      | analog  |
