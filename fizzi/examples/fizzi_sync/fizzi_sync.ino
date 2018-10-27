@@ -4,7 +4,15 @@
 #define USE_SYNC
 
 #include<fizzi.h>
+<<<<<<< Updated upstream
 #include<FizziEnvelope.h>
+=======
+<<<<<<< HEAD
+#include<fizziEnvelope.h>
+=======
+#include<FizziEnvelope.h>
+>>>>>>> origin/master
+>>>>>>> Stashed changes
 
 
 
