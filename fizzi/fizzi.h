@@ -239,7 +239,7 @@ unsigned long fizziMillis(){
 uint8_t _oldState = 0x00;
 ISR(SYNC_INTERRUPT){
   // read port and mask sync pin (pin 9 / PB1)
-  uint8_t newState = SYNC_PIN_REG & (0x01 << 1);
+  uint8_t newState = SYNC_PIN_REG & (0x01 << SYNC_L_SHIFT);
   // compare new and old value
   uint8_t change = newState^_oldState;
   // if there was a change and new > old -> RISING
