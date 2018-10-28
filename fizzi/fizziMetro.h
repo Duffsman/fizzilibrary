@@ -30,7 +30,7 @@ public:
   * RETURN: -
   */
 
-  void setIinterval(uint16_t interval){
+  void setInterval(uint16_t interval){
     _interval = interval;
   }
 
