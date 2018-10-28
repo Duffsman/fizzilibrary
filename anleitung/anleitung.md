@@ -92,7 +92,7 @@ Das alles sind so genannte binäre Operatoren, die folgende Liste zeigen was gen
 | `~1010`			| `0101`			| NOT, alle Bits werden invertiert
 | `1010&0011`		| `0010`			| AND, zwei Werte werden miteinander verrechnet, nur wenn in beiden Werten an der selben Stelle eine 1 steht wird diese ins Ergebnis übernommen
 |`1010|0011`		| `1011`		| OR, zwei Werte werden miteinander verrechnet, sobald einer der Werte an einer Stelle eine 1 hat, wird diese in das Ergebnis übernommen
-| `1010^0011`	|	`1001`			| XOR, zwei Werte werden miteinander verrechnet, nur wenn sich in  beiden Werten die selbe Stelle unterscheidet wird eine 1 in das Ergebnis übernommen
+| `1010^0011`	 |	`1001`			| XOR, zwei Werte werden miteinander verrechnet, nur wenn sich in  beiden Werten die selbe Stelle unterscheidet wird eine 1 in das Ergebnis übernommen
   
 Beim gestalten der eingen Formel muss man das nicht wirklich verstehen, es kann aber hifreich sein. Das tolle an den binären Operatoren ist, dass man mit ihnen auch "normal" mathematische Vorgänge ausführen kann, nur geht das viel flinker. Hier die wichtigsten Beispiele:  
 
