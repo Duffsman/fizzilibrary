@@ -1,6 +1,6 @@
-#fizzi
+# fizzi
 
-##Board
+## Board
 Das fizzi Board lässt sich in 5 Baugruppen unterteilen:
 
 **1. Microcontroller**  
