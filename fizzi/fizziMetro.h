@@ -58,7 +58,7 @@ public:
   * INPUT: - \n
   * RETURN: true when metro is running, otherwise flase
   */
-  void isActive() {
+  bool isActive() {
     return _running;
   }
 
